@@ -1,0 +1,17 @@
+{% extends "planner/planner_base.html" %}
+
+{% block title %} View Task {% endblock  %}
+
+{% block content %}
+<h2>Today's Tasks ({{ today }})</h2>
+<ul>
+    {% for task in tasks %}
+        <li>
+            <strong>{{ task.title }}</strong> ({{ task.start_time }} - {{ task.end_time }}) - 
+            Status: {{ task.status }}
+        </li>
+    {% empty %}
+        <li>No tasks for today!</li>
+    {% endfor %}
+</ul>
+{% endblock %}

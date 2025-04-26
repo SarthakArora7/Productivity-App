@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.side-bar{
+    background-color: gray;
+    width: 20vw;
+    height: 100vh;
+
+
+}
+ul{
+    list-style: none;
+}
+li{
+    margin: 20px 60px;
+}
+.header-box{
+    background-color: black;
+    color: white;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.username{
+    margin: 20px 60px;
+}
+.button{
+    background: none;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    font-weight: 600;
+}

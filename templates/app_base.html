@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Planner{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "app_base.css" %}">
+</head>
+<body>
+    <div class="side-bar">
+        
+    </div>
+    <div class="container">
+        <div>
+            <header>
+                <nav class="header-box">
+                    <h1 class="username">Hey {{ username }}👋</h1>
+                    <ul>
+                        <li>
+                            <form method="POST" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button class="button" type="submit">LogOut</button>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+</body>
+</html>
